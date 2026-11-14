@@ -1,33 +1,46 @@
+import { Link } from "react-router";
+
+
+
 export default function Header() {
   return (
     <header className="bg-white border-b border-gray-200">
       <nav className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold text-blue-600">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2 text-xl font-bold text-blue-600">
+          <span className="text-2xl">🚗</span>
           AutoMarket
-        </a>
+        </Link>
+
+        {/* Navigation */}
         <ul className="flex items-center gap-6 text-sm font-medium">
           <li>
-            <a href="#" className="text-blue-600">
+            <Link to="/">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/catalog">
               Catalog
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:text-blue-600">
+            <Link to="/cars/create">
               Sell a Car
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:text-blue-600">
+            <Link to="/login">
               Login
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              to="/register"
               className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
             >
               Register
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
